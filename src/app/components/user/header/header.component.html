@@ -1,0 +1,10 @@
+<div id="header">
+
+      <nav>
+          <ul>
+              <li *ngIf="!isShown" class="login"><a (click)="loginClick()">Log In</a></li>
+              <li *ngIf="!isShown" class="login"><a (click)="signupClick()">Sign Up</a></li>
+              <li *ngIf="isShown" class="login"><a (click)="logoutClick()">Log out</a></li>
+          </ul>
+      </nav>
+</div>

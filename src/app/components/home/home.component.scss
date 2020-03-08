@@ -1,0 +1,80 @@
+#home-bg {
+    height: 100%;
+    width: 100%;
+    background-image: url('../../../assets/florian-klauer-mk7D-4UCfmg-unsplash.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    
+}
+
+
+#signin-form, #signup-form {
+    position: absolute;
+    text-align: center;
+    border-radius: 0px;
+    padding: 60px;
+    background-color: rgba(0,0,0, 0.9);   
+}
+
+input {
+    border: none;
+    border-bottom: 1px solid #FFF;
+    background: none;
+    color: #F3E367;
+}
+input:focus {
+    outline: none;
+}
+#submit-signin {
+    border: 1px solid #FFF;
+    border-radius: 0px;
+    background-color: #FFF;
+    margin-top:25px;
+    color: #000000;
+    padding: 8px 15px;
+}
+
+app-header {
+    height: 30px;
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+    
+}
+app-footer {
+    height: 90px;
+    width: 100%;
+    bottom: 0;
+    z-index: 1;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+#explore-btn {
+    padding: 10px 15px;
+    background: transparent;
+    color: #000000;   
+    position: absolute;
+    z-index: 200;
+    top:16px;
+    border-radius: 3px;
+    text-decoration: none;
+    transition: 0.3s ease all;
+}
+
+#explore-btn:hover {
+    background: #444;
+    color: #F3E367;
+   
+}
+
+@media only screen and (max-width: 680px) {
+    app-footer {
+        height: 50px;
+    }
+    #explore-btn {
+        font-size: 14px;
+    }
+}

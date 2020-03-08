@@ -1,0 +1,21 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    
+}
+app-root, app-home, app-products {
+    display: block;
+    height: inherit;
+    width: inherit;
+}
+
+p {
+    margin: 0;
+}

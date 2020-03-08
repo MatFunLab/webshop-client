@@ -1,0 +1,30 @@
+#product-order {
+    display: flex;
+    justify-content: center;
+}
+
+button.order-btn {
+    height: 40px;
+    width: 100px;
+    background: transparent;
+    border: 1px solid #000000;
+    margin-top: 10px;
+}
+
+button.order-btn:hover {
+    background: #F3E367;
+    border: 1px solid #F3E367;
+    -webkit-box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.75);
+    transition: all 0.2s ease;
+}
+
+#border-left {
+    height: 60%;
+    border-left: 1px solid #000000;;
+}
+
+#price {
+    margin-top: 80px;
+}

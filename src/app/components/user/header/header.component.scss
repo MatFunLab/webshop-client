@@ -1,0 +1,31 @@
+nav     {
+    width: 100%;
+    display: inline-block;
+    text-align: right;
+  }
+  nav ul   {
+    list-style: none;
+    margin-right: 0;
+  }
+  nav ul li {
+    display: inline-block;
+  }
+  nav ul li a    {
+    color: #000000;
+    text-decoration: none;
+    display: block;
+    padding: 10px 15px;
+    border-radius: 3px;
+    transition: 0.3s ease all;
+  }
+  nav ul li a:hover   {
+    background: #444;
+    color: #F3E367;
+    cursor: pointer;
+  }
+
+  @media only screen and (max-width: 680px) {
+  .login {
+    font-size: 14px;
+  }
+}

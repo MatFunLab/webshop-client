@@ -1,0 +1,57 @@
+<div  id="products-container">
+
+<div fxLayout="row wrap" fxLayout.xs="column wrap">
+    <div id="product-container" *ngFor="let product of products; let i = index" fxFlex.gt-xs="50%" [fxFlex.gt-md]="regularDistribution">
+    <div class="right">
+        <app-product-image [urlImage]="product.imageUrl" [baseUrl]="baseUrl" class="image-top"></app-product-image>
+        <div id=product-details-order>
+                <app-product-details [productDetails]="product.desc"></app-product-details>
+                <app-order [product]="product"></app-order>
+        </div>
+    </div>
+ </div>
+ <div id="no-products" *ngIf="noProducts">
+   <p>No products found</p>
+ </div>
+</div>
+ <!-- floating cart-->
+ <div id="floating-cart">
+    <button id="cart-btn" (click)="goToCart()" *ngIf="showCartBtn">Cart</button>
+ </div>
+ <div id="cart" *ngIf="showCart">
+    <app-cart id="right-cart"></app-cart>
+ </div>
+</div>
+
+ <div id="refine-search">
+      <div class="container" >
+            
+               <img id="menu-arrow" src="../../../../assets/icons8-arrow-50.png" (click)="toggleArrow($event)">
+              
+      </div>
+      <div id="left-panel">
+         <div id="applied-filters-panel">
+            <p class="applied-filters" *ngIf="isKeywordFilter">keywords: {{keyword}}</p> 
+            <p class="applied-filters" *ngIf="isCategoryFilter">category: {{category}}</p>
+            <p class="applied-filters" *ngIf="isPriceFilter">price range: {{lowPrice}}-{{topPrice}}</p>
+            <a class="applied-filters-clear" (click)="onClearAppliedFilters()" *ngIf="isCategoryFilter || isKeywordFilter || isPriceFilter">clear</a>
+         </div>
+            <!--TODO napraviti komponentu left-panel na kojoj će biti search i refine-->
+        <div id="left-panel-content">
+            <input id="search-bar-products" [(ngModel)]="searchVal" placeholder="search products...">
+            <button id="go-btn" (click)="onSearch()">Go</button>
+            <div class="dropdown">
+                  <p class="dropbtn">Categories</p>
+                  <div class="dropdown-content">
+                    <a *ngFor="let category of categories" (click)="refineByCategory(category)">{{category.name}}</a>
+                  </div>
+            </div>
+            <div>
+               <p class="dropbtn">Price</p>
+                <input id="search-price-from" [(ngModel)]="fromVal" placeholder="enter start price"> 
+                <input id="search-price-to" [(ngModel)]="toVal" placeholder="enter top price">
+               <button id="go-btn" (click)="onSearchPrice()">Go</button>
+            </div>
+        </div>
+      </div>
+</div> 

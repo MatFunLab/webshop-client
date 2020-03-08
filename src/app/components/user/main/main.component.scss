@@ -1,0 +1,247 @@
+#product-container {
+    height: 600px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 110px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+app-product-image {
+    display: block;
+    height: 80%;
+    width: 100%;
+}
+#product-details-order {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+}
+app-product-details {
+    display: inline-block;
+    width: 50%;
+    padding-left: 30px;
+    padding-top: 30px;
+    height: 200px;
+    border-bottom: 1px solid #000000;
+}
+app-order {
+    display: inline-block;
+    padding-left: 30px;
+    padding-top: 30px;
+    height: 200px;
+    width: 50%;
+    border-bottom: 1px solid #000000;
+    border-width: 50%;
+}
+
+#floating-cart {
+    z-index: 200;
+    position: fixed;
+    top: 50%;
+    right: 20px;;  
+   }
+#cart-btn {
+    display:block;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    box-shadow: 0 8px 6px -6px black;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #F3E367;
+    border: none;
+    transition: all 0.2s ease-in-out;
+   }
+#cart-btn:hover {
+    transform: scale(1.2);
+}
+#cart {
+    position: fixed;
+    top: 50px;
+    right: 0;
+    z-index: 200;
+    height: 400px;
+    width: 50%;
+    background-color: #FFF;
+    box-shadow: -10px 0 6px -6px black;
+    overflow-y: scroll;
+    background-image: linear-gradient(#7F8688, #929D9E);
+   }
+app-cart {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+.left {
+
+}
+.right {
+
+}
+.image-left {
+
+}
+.image-top, .image-left {
+    height: 300px;
+}
+.image-bottom {
+    height: 200px;
+}
+
+#refine-search {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 200;
+    color:black;
+}
+
+/* hamburger menu */
+
+.container {
+    display: inline-block;
+    cursor: pointer;
+    position: fixed;
+  }
+  
+  .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  
+  /* Rotate first bar */
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+    transform: rotate(-45deg) translate(-9px, 6px) ;
+  }
+  
+  /* Fade out the second bar */
+  .change .bar2 {
+    opacity: 0;
+  }
+  
+  /* Rotate last bar */
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+    transform: rotate(45deg) translate(-8px, -8px) ;
+  }
+
+  /* left-panel */
+
+  #left-panel {
+    position: fixed;
+    top: 70px;
+      left: -320px;
+      height: 500px;
+      width: 300px;
+      background-image: linear-gradient(#7F8688, #929D9E);
+      color: #F3E367;
+      transition: all 1s ease;
+      
+  }
+#left-panel-content {
+    margin-left: 50px;
+    
+}
+.translateHorizontally {
+      transform: translatex(300px); 
+  }
+.change #menu-arrow {
+    -webkit-transform: rotate(180deg) translateX(-200px);
+    transform: rotate(180deg) translateX(-200px) ;
+}
+
+#applied-filters-panel {
+  margin-left: 50px;
+}
+.applied-filters {  
+    margin-top: 10px;
+    text-align: center;
+}
+.applied-filters-clear {
+    text-align: center;
+    display: block;
+    cursor: pointer;
+}
+
+.applied-filters-clear:hover {
+  color: #000000;
+}
+
+#search-bar-products {
+    margin-top: 30px;;
+}
+#go-btn {
+    width: 50px;
+    height: 22px;
+    background: #F3E367;
+    border: none;
+    margin-left: 15px;
+    transition: all 0.2s ease-in-out;
+}
+
+#go-btn:hover {
+    transform: scale(1.1);
+}
+/* Dropdown Button */
+.dropbtn {
+   
+    color: #F3E367;
+    padding: 16px;
+    font-size: 16px;
+   
+  
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+   
+    height: 200px;
+    background-color: inherit;
+    min-width: 160px;
+    z-index: 1;
+    overflow: auto;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+  }
+  
+  .dropdown-content a:hover {
+    color: #F3E367;
+  }
+
+  #search-price-from {
+    margin-bottom: 5px;
+  }
+ #search-price-to {
+
+ }
+
+ #no-products {
+    height: 150px;
+    width: 200px;
+    left:0; 
+    right:0;
+    top:0; 
+    bottom:0;
+    margin:auto;
+    max-width:100%;
+    max-height:100%;
+ }
+
+ 

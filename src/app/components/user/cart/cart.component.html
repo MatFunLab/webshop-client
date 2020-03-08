@@ -1,0 +1,24 @@
+<div id="cart-container">
+  <a id="back-btn" (click)="goToProducts()">Continue shopping</a>
+  <p id="cart-title">Your cart</p>
+  <p *ngIf="noCartMessage">You haven't added any products to bag..</p>
+  <div id="order-container">
+      
+        <div id="order-summary">
+         <div *ngFor="let addedItem of cart" class="item-product-summary">
+           <img class="img-product-summary" src="{{baseUrl}}{{addedItem.product.imageUrl}}">
+           <p class="p-product-summary">{{addedItem.product.name}}</p>
+           <p class="p-product-summary">{{addedItem.product.price}}</p>
+           <p class="p-product-summary">{{addedItem.quantity || 1}}</p>
+          </div>
+
+          <div id="order-btn-wrapper">
+              <button id="order-btn" (click)="onOrder(cart)">ORDER</button>
+            </div>
+
+        </div>
+
+       
+  </div>
+ 
+</div>

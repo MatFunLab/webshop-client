@@ -1,0 +1,14 @@
+<div id="signLoginForms" (click)="removeForm($event)">
+   <form id="signin-form" *ngIf="isLoginClicked" (ngSubmit) = "onClickSubmit(userlogin.value)" #userlogin = "ngForm">
+     <input type="text" name="email" placeholder="Email" ngModel><br>
+     <input type="password" name="password" placeholder="Password" ngModel><br>
+     <button type="submit">Submit</button>
+   </form>
+   <form id="signup-form" *ngIf="isSignUpClicked" (ngSubmit) = "onClickSubmit(usersignup.value)" #usersignup = "ngForm">
+       <input type="text" name="name" placeholder="Name" ngModel><br>
+       <input type="text" name="surname" placeholder="Surname" ngModel><br>
+       <input type="text" name="email" placeholder="Email" ngModel><br>
+       <input type="password" name="password" placeholder="Password" ngModel><br>
+       <button type="submit">Submit</button>
+     </form>
+ </div>
